@@ -1,0 +1,57 @@
+# default.py
+# File containing default go-to configurations
+
+DEFAULT_CONFIG = {
+    "factory": {
+        "name": "Production line",
+        "max_cycle_time_min": 60,
+        "tick_ms": 100,
+        "pull_mode": True,
+        "warning_wip": 20,
+        "critical_wip": 24,
+        "start_time": "06:00",
+        "end_time": "16:00",
+        "starvation_threshold_min": 5
+    },
+    "visual": {
+        "cell_size": 42,
+        "font_size": 10,
+        "dark_mode": True
+    },
+    "sections": [
+        {
+            "id": 1,
+            "title": "Section 1",
+            "length": 10,
+            "step_time": 60,
+            "temp_sensitivity": 1.0,
+            "buffer_limit": 4,
+            "color": "#4CAF50",
+            "earliest_start": "06:00",
+            "pause_mode": "hole_size"
+        },
+        {
+            "id": 2,
+            "title": "Section 2",
+            "length": 5,
+            "step_time": 125,
+            "temp_sensitivity": 1.0,
+            "buffer_limit": 2,
+            "color": "#2196F3",
+            "earliest_start": "06:00",
+            "pause_mode": "hole_size"
+        },
+        {
+            "id": 3,
+            "title": "Section 3",
+            "length": 15,
+            "step_time": 125,
+            "temp_sensitivity": 1.0,
+            "buffer_limit": 2,
+            "color": "#9C27B0",
+            "earliest_start": "06:00",
+            "pause_mode": "hole_size"
+        }
+    ],
+    "pauses": []
+}
