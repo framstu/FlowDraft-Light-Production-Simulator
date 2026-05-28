@@ -88,7 +88,7 @@ class SectionConfigWindow(tk.Toplevel):
                     entry.grid(row=i, column=1, padx=5, pady=2, sticky="w")
                     self.entries[f"section.{index}.{label}"] = entry
 
-            ttk.Button(frame, text="🗑 Remove",
+            ttk.Button(frame, text="- Remove",
                        command=lambda idx=index: self.remove_section(idx)).grid(
                 row=len(labels), column=0, columnspan=2, pady=5
             )
@@ -97,7 +97,7 @@ class SectionConfigWindow(tk.Toplevel):
         btn_f.pack(fill="x", padx=10, pady=5)
 
         ttk.Button(btn_f, text="+ Add section", command=self.add_section).pack(side="left", padx=5)
-        ttk.Button(btn_f, text="💾 Save", command=self.save_all).pack(side="right", padx=5)
+        ttk.Button(btn_f, text="Save", command=self.save_all).pack(side="right", padx=5)
 
     def add_section(self):
         new_id = max([s["id"] for s in self.simulator.config["sections"]], default=0) + 1
@@ -298,7 +298,7 @@ class TimeConfigWindow(tk.Toplevel):
         self.starv_entry.insert(0, str(factory.get("starvation_threshold_min", 5)))
         self.starv_entry.grid(row=3, column=1, pady=2, sticky="w")
 
-        ttk.Button(f, text="💾 Save", command=self.save_all).grid(row=4, column=0, columnspan=2, pady=10)
+        ttk.Button(f, text="Save", command=self.save_all).grid(row=4, column=0, columnspan=2, pady=10)
 
     def save_all(self):
         try:
