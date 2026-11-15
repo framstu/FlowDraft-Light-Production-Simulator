@@ -1,13 +1,18 @@
 # FlowDraft Light Production Simulator v1.0
 
----
 
 ## Overview
 
 FlowDraft Light is a lightweight production line simulator designed for small to medium-sized manufacturing environments. It provides a practical way to model, test and optimize production flows through a simple and configurable interface.
 The project also serves as an experiment in LLM-assisted GUI programming for building tools for production planning, analysis and visualization.
 Originally developed as a personal tool, this version includes only the essential components required for practical use and modification, with sensitive or proprietary elements removed.
----
+
+## Why?
+
+Visualizing how small disruptions ripple through a production line shouldn't require a massive software suite or weeks of setup
+— especially when a straightforward visual tool makes it much easier for teams to see what is happening and agree on changes.
+FlowDraft Light started as a personal tool to quickly sketch out production flows, test break schedules, and see where queues build up.
+It is intentionally kept lightweight and easy to modify—serving both as a practical planning aid for small-to-medium setups and a playground for experimenting with LLM-assisted GUI development.
 
 ## Purpose
 
@@ -20,7 +25,7 @@ The simulator allows users to:
 
 FlowDraft Light is intended for engineers, planners, tinkerers and managers who need a straightforward tool to test configurations and identify potential inefficiencies before implementation.
 
----
+
 
 ## Core Features
 
@@ -35,7 +40,7 @@ Each production line section can be customized with the following parameters:
 
 *Example*: A section with a step time of 120 seconds and a buffer limit of 2 could be configured to simulate a specific stage of the production process.
 
----
+
 
 ### 2. Pause Management
 
@@ -49,7 +54,7 @@ The simulator supports both scheduled and dynamic pauses:
 
 *Example*: A scheduled pause from 12:00 to 13:00 can be applied to specific sections to simulate a lunch break, either by empty slots or as a duration-based break.
 
----
+
 
 ### 3. Real-Time Simulation
 
@@ -62,7 +67,7 @@ The simulator supports both scheduled and dynamic pauses:
 
 *Example*: If a section’s buffer reaches its limit, the traffic light turns red, and a congestion warning is logged.
 
----
+
 
 ### 4. Predictive Analytics
 
@@ -74,7 +79,7 @@ The simulator includes basic predictive capabilities:
 
 *Example*: The system may indicate that a section will starve in 10 minutes if an upstream pause is not resolved.
 
----
+
 
 ### 5. Visual Feedback
 
@@ -84,7 +89,7 @@ The simulator includes basic predictive capabilities:
 
 *Example*: A red slot indicates a paused unit, while a yellow slot signals a section nearing its buffer limit.
 
----
+
 
 ### 6. Factory-Wide Settings
 
@@ -94,7 +99,7 @@ Global parameters can be adjusted, including:
 - **Max Cycle Time**: Set efficiency targets for the production line.
 - **Visual Customization**: Adjust GUI elements such as cell size and font size.
 
----
+
 
 ## Technical Structure
 
@@ -116,7 +121,7 @@ Global parameters can be adjusted, including:
 - **Configuration Windows**: Allow editing of section, pause, and factory settings.
 - **Stats Window**: Displays real-time performance metrics.
 
----
+
 
 ## Getting Started
 
@@ -174,7 +179,7 @@ python main.py
 }
 ```
 
----
+
 
 ## Use Cases
 
@@ -198,20 +203,20 @@ python main.py
 *Scenario*: Training new staff on production line dynamics.  
 *Action*: Use the simulator to demonstrate how pauses and buffer limits affect the overall process.
 
----
+
 
 ## Project Context
 
 FlowDraft Light is an experiment in using LLM-supported GUI programming to create a practical, adaptable tool for production environments. The goal is to provide a simple yet effective simulator that can be modified and extended to fit specific needs. The codebase is designed to be clear and modular, making it accessible for further development or integration into larger systems.
 
----
+
 
 ## Known Quirks
 
 - Some features were intentionally removed to keep the project lightweight and publicly shareable. FlowDraft Light is not an officially deployed industrial tool, but rather an experimental simulation platform. Future updates will refine and extend its capabilities.
 - The GUI currently has a few minor quirks in edge cases. I am continuing work on improving stability and making the interface more deterministic.
 
----
+
 
 ## Future Developments
 
@@ -224,28 +229,28 @@ FlowDraft Light is an experiment in using LLM-supported GUI programming to creat
  - Redesigned GUI for optimized tkinter usage
  - Web-based or compiled application version
 
----
+
 
 ## Project Status
 FlowDraft Light is an actively evolving tool and will continue to receive updates and additional releases over time.
 
----
+
 
 ## Contributing
 
 Contributions are welcome in the form of bug reports, feature suggestions, or code improvements. The project is open to modifications and extensions to better serve production planning needs.
 
----
+
 
 ## License
 
 This project is licensed under the MIT-License. Users are free to use, modify, and distribute the software as needed.
 
----
+
 
 ## Author
 
 Core ideas, architecture, simulation logic, and most of the implementation were created by Matias Back (matias.back@gmail.com).
 Some GUI components and feature extensions were developed using LLM-assisted programming workflows.
 
----
+
