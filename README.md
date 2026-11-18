@@ -1,5 +1,6 @@
 # FlowDraft Light Production Simulator v1.0
 
+![Main screen](img/scr_01.png)
 
 ## Overview
 
